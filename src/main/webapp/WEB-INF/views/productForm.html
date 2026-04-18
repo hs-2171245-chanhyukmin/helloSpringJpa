@@ -26,6 +26,7 @@
         .btn-submit:hover { background: #357abd; }
         .hint { font-size: 0.85em; color: #6c757d; margin-top: 4px; }
         .required { color: #e74c3c; }
+        footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #ddd; text-align: center; color: #555; font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -135,6 +136,10 @@
         </div>
 
     </form>
+
+    <footer>
+        <p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy-MM-dd HH:mm:ss') + ' | 학번: 2171245 | 성명: 민찬혁'}">실습 수행 일시: | 학번: 2171245 | 성명: 민찬혁</p>
+    </footer>
 
 </body>
 </html>

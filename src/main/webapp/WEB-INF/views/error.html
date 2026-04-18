@@ -27,6 +27,7 @@
         .btn:hover { background: #357abd; }
         .btn-gray { background: #6c757d; }
         .btn-gray:hover { background: #545b62; }
+        footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #ddd; text-align: center; color: #555; font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -55,6 +56,10 @@
     </div>
 
     <a class="btn" th:href="@{/products}">← 상품 목록으로 돌아가기</a>
+
+    <footer>
+        <p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy-MM-dd HH:mm:ss') + ' | 학번: 2171245 | 성명: 민찬혁'}">실습 수행 일시: | 학번: 2171245 | 성명: 민찬혁</p>
+    </footer>
 
 </body>
 </html>
